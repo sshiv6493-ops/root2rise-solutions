@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse job listings at Root2Rise Solutions. Find your next opportunity in tech, marketing, and more.">
+    <title>Root2Rise Solutions - Jobs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="icon">🌱</span> Root2Rise Solutions
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="jobs">
+        <h2>Featured Job Listings</h2>
+        <div class="search-bar">
+            <input type="text" id="jobSearch" placeholder="Search jobs by title, company, or location..." aria-label="Search jobs">
+            <button onclick="filterJobs()">Search</button>
+        </div>
+        <div class="job-list" id="jobList">
+            <div class="job" data-title="Software Engineer" data-company="TechCorp" data-location="Remote">
+                <h3>Software Engineer</h3>
+                <p>Company: TechCorp</p>
+                <p>Location: Remote</p>
+                <p>Salary: $80k - $100k</p>
+                <button class="btn" onclick="applyJob('Software Engineer')">Apply Now</button>
+            </div>
+            <div class="job" data-title="Marketing Specialist" data-company="BrandBoost" data-location="New York">
+                <h3>Marketing Specialist</h3>
+                <p>Company: BrandBoost</p>
+                <p>Location: New York</p>
+                <p>Salary: $60k - $75k</p>
+                <button class="btn" onclick="applyJob('Marketing Specialist')">Apply Now</button>
+            </div>
+            <div class="job" data-title="Data Analyst" data-company="DataDrive" data-location="San Francisco">
+                <h3>Data Analyst</h3>
+                <p>Company: DataDrive</p>
+                <p>Location: San Francisco</p>
+                <p>Salary: $70k - $90k</p>
+                <button class="btn" onclick="applyJob('Data Analyst')">Apply Now</button>
+            </div>
+            <!-- Add more jobs as needed -->
+        </div>
+    </section>
+
+    <!-- Modal for Job Application -->
+    <div id="applyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Apply for <span id="jobTitle"></span></h3>
+            <form id="applyForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Cover Letter" rows="3" required></textarea>
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Root2Rise Solutions. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
